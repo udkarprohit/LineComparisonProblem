@@ -24,11 +24,14 @@ public class LineComparisonProblem {
         Double lengthTwo = geometryTwo(30, 40, 40, 30);
         System.out.println("Length two : " + lengthTwo);
 
-        //condition for checking lengthOne is equal to lengthTwo using equals method.
-        if (lengthOne.equals(lengthTwo)) {
-            System.out.println("Length one " + lengthOne + " is Equal to " + "Length Two " + lengthTwo);
+        //condition for checking lengthOne is equal to lengthTwo using compareTo method.
+        int result = lengthOne.compareTo(lengthTwo);
+        if (result > 0) {
+            System.out.println("Length one is greater : " + lengthOne);
+        } else if (result < 0) {
+            System.out.println("Length two is greater : " + lengthTwo);
         } else {
-            System.out.println("Length one " + lengthOne + " Not Equal " + "Length Two " + lengthTwo);
+            System.out.println("Length one " + lengthOne + " is Equal to " + "Length Two " + lengthTwo);
         }
     }//main end
 }
